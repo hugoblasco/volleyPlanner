@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:volleyplanner/ui/app.dart';
 import 'package:volleyplanner/ui/utils/theme.dart';
-import 'package:volleyplanner/ui/view/welcome/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: _title,
       theme: ThemeConfig.loadTheme(),
-      home: const WelcomeScreen(),
+      home: const App(),
     );
   }
 }
