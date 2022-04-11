@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:volleyplanner/ui/view/profile/profile_screen.dart';
 
-class BookingListWidget extends StatelessWidget {
-  BookingListWidget({Key? key}) : super(key: key);
+import '../../courtselected/court_selected_screen.dart';
+
+class CourtListWidget extends StatelessWidget {
+  CourtListWidget({Key? key}) : super(key: key);
 
   final List<String> entries = <String>['1', '2', '3'];
 
@@ -17,8 +18,18 @@ class BookingListWidget extends StatelessWidget {
             child: Card(
               child: ListTile(
                 leading: const Icon(Icons.sports_volleyball_outlined),
+                isThreeLine: true,
                 title: Text('Terrain ' + index.toString()),
-                subtitle: const Text('01/01/2022 10h00 - 11h00'),
+                subtitle: const Text('Premier Créneau dispo : \n01/01/2022 à 10h00'),
+                trailing: const Icon(Icons.arrow_forward),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CourtSelectedScreen(),
+                    ),
+                  );
+                },
               ),
             ),
           );

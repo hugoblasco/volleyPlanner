@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:volleyplanner/ui/view/booking/widget/court_list_widget.dart';
 
-import '../navbar/navbar_screen.dart';
+import '../welcome/widget/book_button_widget.dart';
 
 class BookingScreen extends StatelessWidget {
   const BookingScreen({Key? key}) : super(key: key);
@@ -14,6 +15,7 @@ class BookingScreen extends StatelessWidget {
             'Réserver un terrain',
             style: Theme.of(context).textTheme.headline6,
           ),
+          CourtListWidget(),
         ],
       ),
     );

@@ -3,8 +3,6 @@ import 'package:volleyplanner/ui/view/welcome/widget/book_button_widget.dart';
 import 'package:volleyplanner/ui/view/welcome/widget/booking_list_widget.dart';
 import 'package:volleyplanner/ui/view/welcome/widget/greeting_widget.dart';
 
-import '../navbar/navbar_screen.dart';
-
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
 
@@ -19,7 +17,6 @@ class WelcomeScreen extends StatelessWidget {
           ),
           const GreetingWidget(),
           BookingListWidget(),
-          const BookButtonWidget(),
         ],
       ),
     );
